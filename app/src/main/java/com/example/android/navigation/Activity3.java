@@ -1,5 +1,6 @@
 package com.example.android.navigation;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.ActionBar;
@@ -33,6 +34,8 @@ public class Activity3 extends AppCompatActivity {
         super.onBackPressed();
         TaskStackBuilder builder = TaskStackBuilder.create(this);
         builder.addParentStack(Activity3.class);
+        builder.addNextIntent(new Intent(this, MainActivity.class));
+        builder.addNextIntent(new Intent(this, Activity2.class));
         startActivities(builder.getIntents());
     }
 }
