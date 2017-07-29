@@ -20,6 +20,11 @@ public class Activity3 extends AppCompatActivity {
         }
     }
 
+    /**
+     * I'll override on options item selected and then I'll look at
+     * the item ID and I'll compare it to Android.r.id.home,
+     * and that's the reserved ID for the up button.
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == android.R.id.home){
@@ -29,6 +34,12 @@ public class Activity3 extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * BECAUSE I COMMENT THE CODE IN MANIFEST!!!
+     * Add parent stack wasn't able to add anything to the stack because
+     * there's nothing in the manifest. And so this takes us to adding our own intents.
+     * After I've created the builder, I'll add a couple of calls to a method called add next intent.
+     */
     @Override
     public void onBackPressed() {
         super.onBackPressed();
